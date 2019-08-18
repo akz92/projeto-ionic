@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-list lines="full" *ngIf="produto !== undefined">
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input required [(ngModel)]="produto.nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descricao</ion-label>
+        <ion-input required [(ngModel)]="produto.descricao"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Categoria</ion-label>
+        <ion-input required [(ngModel)]="produto.categoria"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Valor</ion-label>
+        <ion-input required [(ngModel)]="produto.valor"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" (click)="salvar()">Salvar</ion-button>
+  </div>
+</ion-content>
